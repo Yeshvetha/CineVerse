@@ -74,6 +74,7 @@ To run CineVerse locally on your machine:
 
 
 **Live Demo**
+
 https://yeshvetha.github.io/CineVerse/
 
 **Author**
