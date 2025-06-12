@@ -1,0 +1,112 @@
+#logoText {
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #14aaa8 !important;
+}
+
+/* Dark Navbar */
+.navbar {
+  background-color: #111 !important;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar .dropdown-toggle {
+  color: white !important;
+}
+
+/* Dropdown Menu Background and Text */
+.dropdown-menu {
+  background-color: #222 !important;
+  border: 1px solid #444;
+}
+
+.dropdown-item {
+  color: white !important;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #333 !important;
+  color: #00ff99 !important; /* or white if you prefer */
+}
+
+/* Search Button Styling */
+#searchForm button {
+  background-color: #00ff99 !important; /* Bright green or choose your preferred */
+  color: #111 !important; /* Dark text for contrast */
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+#searchForm button:hover {
+  background-color: #00cc7a !important; /* Slightly darker on hover */
+  color: white !important;
+}
+
+.btn-outline-success {
+  border-color: #00ff99 !important;
+  color: #00ff99 !important;
+}
+
+.btn-outline-success:hover {
+  background-color: #00ff99 !important;
+  color: #111 !important;
+}
+
+
+/* Show dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+/* Scrollable dropdown for large genre lists */
+#navbarGenreMenu,
+#navbarLanguageMenu {
+  max-height: 300px; /* Adjust as needed */
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+/* Optional scrollbar style for Webkit */
+#navbarGenreMenu::-webkit-scrollbar,
+#navbarLanguageMenu::-webkit-scrollbar {
+  width: 6px;
+}
+
+#navbarGenreMenu::-webkit-scrollbar-thumb,
+#navbarLanguageMenu::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#suggestions {
+    max-height: 200px;           /* Limit height */
+    overflow-y: auto;            /* Enable vertical scroll */
+    background-color: white;     /* Ensure background for readability */
+    z-index: 1000;               /* Make sure it's above other elements */
+    border: 1px solid #ccc;      /* Optional: subtle border */
+    border-radius: 0 0 5px 5px;  /* Rounded bottom corners */
+}
+
+#suggestions li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adds '...' when text is too long */
+}
+#movieSectionHeading {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fcf4f4; /* Neon-like teal for pop */
+  border-bottom: 2px solid #fcf4f4;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
