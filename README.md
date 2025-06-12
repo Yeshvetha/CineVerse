@@ -71,6 +71,22 @@ To run CineVerse locally on your machine:
 
 ![5](https://github.com/user-attachments/assets/67ce4902-ef9d-4231-9d19-bd05fe9fad3f)
 
+![6](https://github.com/user-attachments/assets/ea46837b-7c54-4f7c-bb1b-d66e30df22f4)
+
+![7](https://github.com/user-attachments/assets/5bc5ad96-5e0b-43be-9ae6-a7a25e7bb166)
+
+![8](https://github.com/user-attachments/assets/17ae60cd-49e7-4b92-bbdc-668106dec05e)
+
+![9](https://github.com/user-attachments/assets/e835a8ff-e61f-4155-ac3d-592015b4d18d)
+
+![10](https://github.com/user-attachments/assets/0c5ba1b3-bb6b-43a0-9483-2f9bd66cfb0e)
+
+
+
+
+
+
+
 
 
 **Live Demo**
