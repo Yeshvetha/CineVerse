@@ -1,77 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>CineVerse</title>
-        <link rel="stylesheet" href="static/css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>CineVerse</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+  </head>
 
-    </head>
-    <body style="background-color: brown;">
-    
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark"  >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#" id="logoText">CineVerse</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" id="homeLink" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarGenreDropDrown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Genres</a>
-                        <ul class="dropdown-menu" id="navbarGenreMenu" aria-labelledby="navbarGenreDropdown">
+  <body class="d-flex flex-column min-vh-100" style="background-color: brown;">
+    <!-- Main Content Wrapper -->
+    <div class="flex-grow-1">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" id="logoText">CineVerse</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                        </ul>
-                    </li> 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Languages</a>
-                        <ul class="dropdown-menu" id="navbarLanguageMenu" aria-labelledby="navbarLanguageDropdown">                            
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="watchlistLink">Watchlist</a>
-                    </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" id="homeLink" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarGenreDropDrown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Genres
+                </a>
+                <ul class="dropdown-menu" id="navbarGenreMenu" aria-labelledby="navbarGenreDropdown"></ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarLanguageDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Languages
+                </a>
+                <ul class="dropdown-menu" id="navbarLanguageMenu" aria-labelledby="navbarLanguageDropdown"></ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="watchlistLink">Watchlist</a>
+              </li>
+            </ul>
+          </div>
 
-                </ul>
-            </div>
-            <div class="position-relative w-100">
-                <form class="d-flex" id="searchForm" role="search">
-                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search for a movie..." aria-label="Search"/>
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <ul id="suggestions" class="list-group position-absolute w-100" ></ul>
-            </div>
+          <!-- Search -->
+          <div class="position-relative w-100">
+            <form class="d-flex" id="searchForm" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                id="searchInput"
+                placeholder="Search for a movie..."
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <ul id="suggestions" class="list-group position-absolute w-100"></ul>
+          </div>
         </div>
-    </nav>
+      </nav>
 
-    <div class="container mt-4">
-        <h4 id="movieSectionHeading" >Popular   Movies</h4>
-        <div id="movies-container" class="row rpw-cols-1 row-cols-md-4 g-4 mt-3"></div>
+      <!-- CONTENT SECTION -->
+      <div class="container mt-4">
+        <h4 id="movieSectionHeading">Popular Movies</h4>
+        <div id="movies-container" class="row row-cols-1 row-cols-md-4 g-4 mt-3"></div>
         <div id="pagination" class="mt-4 d-flex justify-content-center flex-wrap"></div>
+      </div>
+
+      <div class="container mt-5">
+        <h4>Explore Category</h4>
+        <div id="genreRow" class="row mt-4 text-center"></div>
+      </div>
     </div>
 
-    <div class="container mt-5">
-        <h4 id="movieSectionHeading">Explore Category</h4>
-        <div id="genreRow" class="row mt-4 text-center">
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light text-center py-3 mt-auto">
+      <div class="container">
+        <p class="mb-0">© 2025 CineVerse. All rights reserved.</p>
+        <small
+          >Powered by
+          <a
+            href="https://www.themoviedb.org/"
+            target="_blank"
+            class="text-decoration-none text-success"
+            >TMDb API</a
+          ></small
+        >
+      </div>
+    </footer>
 
-        </div>
-    </div>
-  </div>
-</nav>
-</div>
-<footer class="bg-dark text-light text-center py-3 mt-5">
-  <div class="container">
-    <p class="mb-0">© 2025 CineVerse. All rights reserved.</p>
-    <small>Powered by <a href="https://www.themoviedb.org/" target="_blank" class="text-decoration-none text-success">TMDb API</a></small>
-  </div>
-</footer>
-
+    <!-- JS Scripts -->
     <script src="static/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-
-    </body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
